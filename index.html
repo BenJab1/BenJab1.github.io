@@ -11,7 +11,7 @@
 	Benjamin "The Man, The Myth, The Legend" Jablonski's Website
 </h1>
 	
-<p>This example calls a function which performs a calculation, and returns the result:</p>
+<p id="test">This example calls a function which performs a calculation, and returns the result:</p>
 
 <p id="demo"></p>
 
@@ -20,6 +20,25 @@ function myFunction(p1, p2) {
   return p1 * p2;
 }
 document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+	
+<button id="hideButton" onclick="myFunction()">Hide elements</button>
+<button id="showButton" onclick="myFunction2()" style="display: none;">Show elements</button>
+
+<script>
+function myFunction() {
+  document.getElementById('test').style.display = 'none';
+  document.getElementById('hideButton').style.display = 'none';
+  document.getElementById('showButton').style.display = 'block';
+}
+</script>
+
+<script>
+function myFunction2() {
+  document.getElementById('test').style.display = 'block';
+  document.getElementById('showButton').style.display = 'none';
+  document.getElementById('hideButton').style.display = 'block';
+}
 </script>
 	
 
